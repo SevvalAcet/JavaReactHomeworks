@@ -1,5 +1,6 @@
 
 import Adapters.MernisServerAdapter;
+
 import Concrete.StarbucksCustomerManager;
 import Entities.Customer;
 
@@ -13,9 +14,8 @@ public class Main {
          customer.setLastName("ACET");
          customer.setDateOfBirh(new GregorianCalendar(2001, 9, 06).getTime());
          customer.setNationalityId("12345678910");
-         StarbucksCustomerManager StarbucksCustomerManager = new StarbucksCustomerManager(new MernisServerAdapter());
-         
-         
+         StarbucksCustomerManager starbucksCustomerManager = new StarbucksCustomerManager(new MernisServerAdapter());
+         starbucksCustomerManager.save(customer);         
 	}
 
 }
